@@ -8,8 +8,11 @@
     - [1.1 Pagina de detalhes do problema](#11-pagina-de-detalhes-do-problema)
     - [1.2 Envio de resposta](#12-envio-de-resposta)
     - [1.3 Resultado do envio](#13-resultado-do-envio)
-  - [2. FAQ](#2-faq)
-  - [3. Fontes <a name="fontes"></a>](#3-fontes-)
+  - [2. Problemas Comuns](#2-problemas-comuns)
+    - [2.1 Você não está programando para um usuário](#21-você-não-está-programando-para-um-usuário)
+    - [2.2 Explicando respostas de juízes online](#22-explicando-respostas-de-juízes-online)
+  - [3. FAQ](#3-faq)
+  - [4. Fontes <a name="fontes"></a>](#4-fontes-)
 
 
 ## 1. Enviando a resposta de um problema
@@ -52,12 +55,32 @@ Caso algum caso de teste tenha falhado, o The Huxley mostrará a seguinte tela. 
 
 A plataforma não mostra, na maioria das vezes, o que está fazendo com que seu código não passe. Por este motivo, é sempre bom ler a descrição do problema com calma e pensar em todos os possíveis casos específicos.
 
-## 2. FAQ
+## 2. Problemas Comuns
+
+### 2.1 Você não está programando para um usuário
+
+O The Huxley checa se a saída é exatamente igual ao esperado. Por este motivo, não se pode adicionar coisas no console que não foram pedidas na descrição. Então, casos como esses são casos comuns de confusão entre iniciantes na plataforma:
+- Mensagens amigáveis ('Digite seu nome:') que não foram pedidas na descrição.
+- Quantidade de casas decimais no número de saída. Ex: _9_ ao invés de _9.00_
+- Letras maiúsculas e minúsculas
+- Espaçamentos antes e depois de strings
+
+### 2.2 Explicando respostas de juízes online
+
+A tabela abaixo explica um pouco melhor sobre os erros levantados em juizes online (plataformas como o The Huxley)
+| Resposta                    	| Status 	| Explicação                                                           	|
+|-----------------------------	|--------	|----------------------------------------------------------------------	|
+| Correto                     	| ✅      	| Seu programa está correto. Passou em todos os casos de teste         	|
+| Resposta Errada             	| ❌      	| Seu programa executou, mas deu alguma resposta diferente do esperado 	|
+| Limite de tempo excedido    	| ❌      	| O programa demorou muito executando e foi abortado                   	|
+| Erro em tempo de execução   	| ❌      	| Gerou um erro durante a execução, sendo impossível concluir a mesma  	|
+| Erro em tempo de compilação 	| ❌      	| Há algum erro de sintaxe que inviabiliza a execução do mesmo         	|
+## 3. FAQ
 
 WIP
 
-## 3. Fontes <a name="fontes"></a>
+## 4. Fontes <a name="fontes"></a>
 
 * https://docplayer.com.br/175639975-Dicas-de-uso-do-the-huxley-prof-alberto-costa-neto-introducao-a-ciencia-da-computacao-programacao-em-python.html
 * http://albertocn.sytes.net/2017-3/pi/thehuxley/GuiaCadastramentoTheHuxley.pdf
-* 
+

@@ -8,11 +8,13 @@
     - [1.1 Pagina de detalhes do problema](#11-pagina-de-detalhes-do-problema)
     - [1.2 Envio de resposta](#12-envio-de-resposta)
     - [1.3 Resultado do envio](#13-resultado-do-envio)
-  - [2. Problemas Comuns](#2-problemas-comuns)
-    - [2.1 Você não está programando para um usuário](#21-você-não-está-programando-para-um-usuário)
-    - [2.2 Explicando respostas de juízes online](#22-explicando-respostas-de-juízes-online)
-  - [3. FAQ](#3-faq)
-  - [4. Fontes <a name="fontes"></a>](#4-fontes-)
+  - [2. Pegando informações da entrada em Python](#2-pegando-informações-da-entrada-em-python)
+    - [2.1 Lista de números na mesma linha](#21-lista-de-números-na-mesma-linha)
+  - [3. Problemas Comuns](#3-problemas-comuns)
+    - [3.1 Você não está programando para um usuário](#31-você-não-está-programando-para-um-usuário)
+    - [3.2 Explicando respostas de juízes online](#32-explicando-respostas-de-juízes-online)
+  - [4. FAQ](#4-faq)
+  - [5. Fontes](#5-fontes)
 
 
 ## 1. Enviando a resposta de um problema
@@ -55,9 +57,36 @@ Caso algum caso de teste tenha falhado, o The Huxley mostrará a seguinte tela. 
 
 A plataforma não mostra, na maioria das vezes, o que está fazendo com que seu código não passe. Por este motivo, é sempre bom ler a descrição do problema com calma e pensar em todos os possíveis casos específicos.
 
-## 2. Problemas Comuns
+## 2. Pegando informações da entrada em Python
 
-### 2.1 Você não está programando para um usuário
+Há alguns casos de entrada específicos que podem se tornar bem chatos para receber as informações de entrada em python. Por este motivo, decidi fazer esta seção demonstrando como receber corretamente algumas das principais entradas de problemas do The Huxley.
+
+### 2.1 Lista de números na mesma linha
+
+Dada uma entrada:
+
+```
+100 200 50 500
+```
+
+Apenas um `input` faria com que a seguinte string fosse reconhecida como entrada:
+
+```python
+entrada = input()
+# entrada = "100 200 50 500"
+```
+
+Você pode usar o seguinte artifício para separar todas esses valores da linha:
+
+```python
+entrada = [int(elemento) for elemento in input().split()]
+# entrada = [100, 200, 50, 500]
+```
+
+
+## 3. Problemas Comuns
+
+### 3.1 Você não está programando para um usuário
 
 O The Huxley checa se a saída é exatamente igual ao esperado. Por este motivo, não se pode adicionar coisas no console que não foram pedidas na descrição. Então, casos como esses são casos comuns de confusão entre iniciantes na plataforma:
 - Mensagens amigáveis ('Digite seu nome:') que não foram pedidas na descrição.
@@ -65,7 +94,7 @@ O The Huxley checa se a saída é exatamente igual ao esperado. Por este motivo,
 - Letras maiúsculas e minúsculas
 - Espaçamentos antes e depois de strings
 
-### 2.2 Explicando respostas de juízes online
+### 3.2 Explicando respostas de juízes online
 
 A tabela abaixo explica um pouco melhor sobre os erros levantados em juizes online (plataformas como o The Huxley)
 | Resposta                    	| Status 	| Explicação                                                           	|
@@ -75,11 +104,11 @@ A tabela abaixo explica um pouco melhor sobre os erros levantados em juizes onli
 | Limite de tempo excedido    	| ❌      	| O programa demorou muito executando e foi abortado                   	|
 | Erro em tempo de execução   	| ❌      	| Gerou um erro durante a execução, sendo impossível concluir a mesma  	|
 | Erro em tempo de compilação 	| ❌      	| Há algum erro de sintaxe que inviabiliza a execução do mesmo         	|
-## 3. FAQ
+## 4. FAQ
 
 WIP
 
-## 4. Fontes <a name="fontes"></a>
+## 5. Fontes
 
 * https://docplayer.com.br/175639975-Dicas-de-uso-do-the-huxley-prof-alberto-costa-neto-introducao-a-ciencia-da-computacao-programacao-em-python.html
 * http://albertocn.sytes.net/2017-3/pi/thehuxley/GuiaCadastramentoTheHuxley.pdf
